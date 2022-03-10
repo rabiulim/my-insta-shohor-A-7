@@ -16,6 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
+  // console.log(id)
   likedPostsId.plus(id);
   showPosts(posts);
 };
@@ -127,7 +128,7 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${post.comments[0]?.user}
                       </a>
                       ${post.comments?.text}
                     </small>
